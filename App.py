@@ -69,12 +69,8 @@ if st.sidebar.button("预测"):
         test_df[continuous_vars1] = scaler1.transform(test_df[continuous_vars1])
         explainer = shap.Explainer(model1)  # 创建解释器
         shap_ = explainer.shap_values(test_df)
-        
-        mpl.rcParams['pdf.fonttype'] = 'TrueType'  
-        mpl.rcParams['pdf.use14corefonts'] = True
-        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
-        plt.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题
         shap_values = explainer.shap_values(test_df)
+        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
         shap.decision_plot(explainer.expected_value[0], shap_values[1][0], test_df.columns)
         plt.tight_layout()
         plt.savefig('shap1.png', dpi=300)
@@ -97,8 +93,8 @@ if st.sidebar.button("预测"):
         test_df2[continuous_vars2] = scaler2.transform(test_df2[continuous_vars2])
         explainer = shap.Explainer(model2)  # 创建解释器
         shap_ = explainer.shap_values(test_df2)
-        
         shap_values2 = explainer.shap_values(test_df2)
+        plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
         shap.decision_plot(explainer.expected_value[0], shap_values2[1][0], test_df2.columns)
         plt.tight_layout()
         plt.savefig('shap2.png', dpi=300)
