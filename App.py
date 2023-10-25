@@ -70,7 +70,8 @@ if st.sidebar.button("预测"):
         explainer = shap.Explainer(model1)  # 创建解释器
         shap_ = explainer.shap_values(test_df)
         shap_values = explainer.shap_values(test_df)
-        plt.rcParams['font.sans-serif'] = ['STSong']
+        mpl.font_manager.fontManager.addfont('字体/SimHei.ttf') #临时注册新的全局字体
+        plt.rcParams['font.sans-serif'] = ['SimHei']
         # plt.rcParams['axes.unicode_minus'] = False
         # from matplotlib import font_manager
         # fangsong_font = font_manager.FontProperties(family="SimHei")
@@ -99,7 +100,7 @@ if st.sidebar.button("预测"):
         explainer = shap.Explainer(model2)  # 创建解释器
         shap_ = explainer.shap_values(test_df2)
         shap_values2 = explainer.shap_values(test_df2)
-        plt.rcParams['font.sans-serif'] = ['STSong']
+        plt.rcParams['font.sans-serif'] = ['SimHei']
         # plt.rcParams['axes.unicode_minus'] = False
         # from matplotlib import font_manager
         # fangsong_font = font_manager.FontProperties(family="SimHei")
