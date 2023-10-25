@@ -70,7 +70,7 @@ if st.sidebar.button("预测"):
         explainer = shap.Explainer(model1)  # 创建解释器
         shap_ = explainer.shap_values(test_df)
         shap_values = explainer.shap_values(test_df)
-        plt.rcParams['font.sans-serif'] = ['kaiti']
+        plt.rcParams['font.sans-serif'] = ['WenQuanYi Micro Hei']
         plt.rcParams['axes.unicode_minus'] = False
         shap.decision_plot(explainer.expected_value[0], shap_values[1][0], test_df.columns)
         plt.tight_layout()
@@ -95,7 +95,7 @@ if st.sidebar.button("预测"):
         explainer = shap.Explainer(model2)  # 创建解释器
         shap_ = explainer.shap_values(test_df2)
         shap_values2 = explainer.shap_values(test_df2)
-        plt.rcParams['font.sans-serif'] = ['kaiti']
+        plt.rcParams['font.sans-serif'] = ['WenQuanYi Micro Hei']
         plt.rcParams['axes.unicode_minus'] = False
         shap.decision_plot(explainer.expected_value[0], shap_values2[1][0], test_df2.columns)
 
