@@ -70,7 +70,7 @@ if st.sidebar.button("预测"):
         explainer = shap.Explainer(model1)  # 创建解释器
         shap_ = explainer.shap_values(test_df)
         shap_values = explainer.shap_values(test_df)
-        mpl.font_manager.fontManager.addfont('C:\\Users\\admin\\Downloads\\SimHei.ttf') #临时注册新的全局字体
+        mpl.font_manager.fontManager.addfont('C:/Users/admin/Downloads/SimHei.ttf') #临时注册新的全局字体
         plt.rcParams['font.sans-serif'] = ['SimHei']
         # plt.rcParams['axes.unicode_minus'] = False
         # from matplotlib import font_manager
