@@ -22,7 +22,7 @@ st.set_page_config(layout='wide')
 st.write("<h1 style='text-align: center'>颅内血肿清除术后患者器官/腔隙感染和院内死亡的综合预测工具</h1>",
          unsafe_allow_html=True)
 st.markdown('-----')
-st.warning('本预测工具由滕州市中心人民医院感染管理科开发，旨在早期预测颅内血肿清除术后患者的器官/腔隙感染和院内死亡情况，改善患者预后')
+st.warning('本预测工具旨在早期预测颅内血肿清除术后患者的器官/腔隙感染和院内死亡情况，改善患者预后')
 
 dic1 = {
     '男': 1,
